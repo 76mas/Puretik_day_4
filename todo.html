@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./todo.css" rel="stylesheet" />
+    <title>To Do</title>
+  </head>
+  <body>
+    <section class="welcome-body">
+      <div class="head">
+        <div class="containor">
+          <header>
+            <div class="logo">To<span class="d">D</span>o</div>
+            <div class="nav">
+              <a class="active">Home</a>
+              <a href="./index.html">About</a>
+            </div>
+          </header>
+        </div>
+      </div>
+      <div class="containor">
+        <div class="text-hero">
+          <h1>Simple ToDo App</h1>
+          <p>This todo app for test design.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="todos">
+      <div class="containor">
+        <div class="action">
+          <input id="input" placeholder="Write Text here . . ." type="text" />
+          <button class="addtask">+ Add New</button>
+        </div>
+      </div>
+
+      <div class="containor">
+        <div class="todo">
+          <!-- <div class="nodata nodata">
+            <img class="nodata" src="./img/nodata.svg" alt="no data" />
+          </div> -->
+        </div>
+      </div>
+
+      <div class="containor">
+        <div class="cunter">
+          <h2>Total List: <span class="number"></span></h2>
+        </div>
+      </div>
+
+      <div class="bot">
+        <div class="containor">
+          <div class="bottom-button addtask">
+            <button class="addtask">+ Add New</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    let inputTask = document.getElementById("input");
+    let add = document.querySelectorAll(".addtask");
+    let task = document.querySelector(".todo");
+    let arrayTasks = [];
+    let count = document.querySelector(".number");
+    // let nodata = document.querySelectorAll(".nodata");
+
+    count.innerHTML = arrayTasks.length;
+
+    add.forEach((button) => {
+      button.addEventListener("click", () => {
+        if (inputTask.value.trim() === "") return;
+
+        let id = Date.now();
+        let taskelemnt = `
+      <div id="${id}" class="task">
+        <div class="task-body">
+          <p>${inputTask.value}</p>
+        </div>
+        <div class="delete"><span>X</span></div>
+      </div>`;
+
+        arrayTasks.push({ id: id, Element: taskelemnt });
+        console.log(arrayTasks);
+
+        task.innerHTML += taskelemnt;
+        inputTask.value = "";
+        count.innerHTML = arrayTasks.length;
+
+        // console.log(nodata);
+        // nodata.forEach((no) => {
+        //   no.classList.add("heddin");
+        // });
+      });
+    });
+
+    task.addEventListener("click", (e) => {
+      if (e.target.closest(".delete")) {
+        let taskElement = e.target.closest(".task");
+        let id = taskElement.id;
+        taskElement.remove();
+        arrayTasks = arrayTasks.filter((t) => t.id != id);
+        count.innerHTML = arrayTasks.length;
+        // if (arrayTasks.length === 0) {
+        // }
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Fascinate&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+a{
+    text-decoration: none;
+    color: #000;
+    
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+.todos{
+    position: relative;
+}
+
+
+.nodata img{
+    
+    width: 100%;
+    height: 30%;
+}
+.logo,.d{
+     font-family: "Fascinate", system-ui;
+        font-weight: 400;
+        font-size: 25px;
+        color: #666;
+        font-style: normal;
+}
+
+.d{
+    
+    color: blue;
+}
+
+.head{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+}
+.welcome-body{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-hero p{
+    font-size: 18px;
+    font-weight: 400;
+
+    color: #666;
+}
+
+.text-hero h1{
+    font-size: 35px;
+
+}
+
+.containor{
+    width: 100%;
+    position: relative;
+    max-width: 570px;
+    padding: 20px;
+}
+.nav{
+    display: flex;
+    gap:20px;
+}
+
+.nav .active{
+    color: blue;
+}
+
+.text-hero{
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.todos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+}
+
+.action{
+    width: 100%;
+    display: flex;
+    gap: 23px;
+    justify-content: space-between;
+
+}
+.action input{
+    width: 100%;
+    border: 2px solid #EEEEEE;
+    border-radius: 8px;
+       height: 48px;
+    padding-left: 20px;
+    /* color: #eee; */
+    font-size: 20px
+
+}
+
+.action input:focus{
+    border: 2px solid #d9d9d9;
+}
+.action button{
+    width: 200px;
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+    height: 48px;
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 20px;
+    transition: .3s ease;
+}
+
+
+.action button:hover{
+    background-color: rgba(0, 0, 255, 0.873);
+
+}
+
+.todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.todo .task{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #F6F6F6;
+}
+
+.todo .task .delete{
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+    justify-content: center;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    padding:5px 10px 5px 10px;
+    color: red  ;
+}
+.delete {
+    font-weight: 200;
+}
+
+.cunter{
+    width: 100%;
+    margin-top: 25px;
+    font-size: 12px;
+    font-weight: 200;
+    color: #666666;
+
+    padding-bottom: 80px;
+
+}
+.cunter span{
+    color: black;
+
+    font-size: 20px;
+    font-weight: 900;
+   
+}
+.bot{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.task-body p{
+
+    font-size: 22px;
+}
+
+.bottom-button {
+    display: none;
+  
+    width: 100%;
+    bottom: 30px;
+
+}
+
+.bottom-button button{
+   
+   width: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+    height: 48px;
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 20px;
+    transition: .3s ease;
+
+}
+
+
+.bottom-button button:hover{
+    background-color: rgba(0, 0, 255, 0.873);
+
+}
+
+.heddin{
+    display: none;
+}
+
+@media (max-width:540px){
+
+    .bottom-button{
+        display: block;
+    }
+
+    .action button{
+        display: none;
+    }
+
+    
+}

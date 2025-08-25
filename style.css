@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Fascinate&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+
+.logo,.d{
+     font-family: "Fascinate", system-ui;
+        font-weight: 400;
+        font-size: 25px;
+        color: #666;
+        font-style: normal;
+}
+
+.d{
+    
+    color: blue;
+}
+
+
+.head{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+}
+.welcome-body{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-hero p{
+    font-size: 18px;
+    font-weight: 400;
+
+    color: #666;
+}
+
+.text-hero h1{
+    font-size: 35px;
+
+}
+a{
+    text-decoration: none;
+    color: #000;
+    
+}
+.containor{
+    width: 100%;
+    max-width: 570px;
+    padding: 20px;
+}
+.nav{
+    display: flex;
+    gap:20px;
+}
+
+
+.nav .active{
+    color: blue;
+}
+.text-hero{
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.body-todo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.img{
+    margin-top: 70px;
+}
+
+
+.hero-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 200px;
+}
+
+.bottom h2{
+font-size: 18px;
+font-weight: 400;
+color: #666;
+
+
+}
+
+
+
+.bottom h2 span{
+    color: blue;
+}
+
+@media (max-width:720px){
+    .img img{
+        width: 400px;
+    }
+}
+
+@media (max-width:500px){
+    .img img{
+        width: 300px;
+    }
+}
