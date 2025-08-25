@@ -110,6 +110,9 @@ header{
     gap: 23px;
     justify-content: space-between;
 
+    padding-bottom: 15px;
+    border-bottom: 1PX solid #F6F6F6;
+
 }
 .action input{
     width: 100%;
